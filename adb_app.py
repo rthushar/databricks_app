@@ -1,4 +1,8 @@
 # Databricks notebook source
+# MAGIC %pip install pyspark
+
+# COMMAND ----------
+
 # MAGIC %pip install streamlit
 
 # COMMAND ----------
