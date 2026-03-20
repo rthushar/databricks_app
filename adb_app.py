@@ -8,19 +8,19 @@
 # COMMAND ----------
 
 import streamlit as st
-from pyspark.sql import SparkSession
-
-spark = SparkSession.builder \
-    .appName("test") \
-    .getOrCreate()
-
-    
+ 
 st.title("Databricks app")
+ 
 
-df = spark.sql("SELECT * FROM  ai.mcp.dim_account")
 
-# Convert to pandas (for display)
-pdf = df.toPandas()
+# COMMAND ----------
 
-# Show in grid
+# MAGIC %sql
+# MAGIC SELECT  *
+# MAGIC FROM  ai.mcp.dim_account
+
+# COMMAND ----------
+
+pdf = _sqldf.toPandas()
+
 st.dataframe(pdf)
